@@ -24,6 +24,7 @@ kotlin {
             implementation(libs.logback)
             implementation(libs.ktor.server.core)
             implementation(libs.ktor.server.netty)
+            implementation(libs.ktor.server.status.pages)
         }
         jvmTest.dependencies {
             implementation(libs.ktor.server.tests)
