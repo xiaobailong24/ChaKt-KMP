@@ -36,7 +36,7 @@ fun Application.module() {
                 .map { it.text ?: "" }
                 .onEach { completeText.append(it) }
                 .catch { call.respondText(it.toString()) }
-                .collect { call.respondText(it) }
+                .collect { call.respondText(completeText.toString()) }
         }
     }
 }
