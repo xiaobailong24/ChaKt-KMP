@@ -19,5 +19,7 @@ dependencyResolutionManagement {
     }
 }
 
+include(":generativeai")
+project(":generativeai").projectDir = file("../generative-ai-kmp/generativeai")
 include(":server")
-include(":composeApp")
+//include(":composeApp")

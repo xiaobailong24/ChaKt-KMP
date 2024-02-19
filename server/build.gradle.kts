@@ -19,10 +19,11 @@ kotlin {
 
     sourceSets {
         jvmMain.dependencies {
-                implementation(libs.generativeai.google)
-                implementation(libs.logback)
-                implementation(libs.ktor.server.core)
-                implementation(libs.ktor.server.netty)
+//            implementation(libs.generativeai.google)
+            implementation(projects.generativeai)
+            implementation(libs.logback)
+            implementation(libs.ktor.server.core)
+            implementation(libs.ktor.server.netty)
         }
         jvmTest.dependencies {
             implementation(libs.ktor.server.tests)
@@ -31,10 +32,10 @@ kotlin {
     }
 }
 
-group = "dev.shreyaspatil.chakt.server"
+group = "server"
 version = "1.0.0"
 application {
-    mainClass.set("com.kmp.app.ApplicationKt")
+    mainClass.set("ApplicationKt")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=${extra["development"] ?: "false"}")
 }
 
